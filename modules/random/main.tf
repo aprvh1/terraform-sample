@@ -1,6 +1,6 @@
 variable "generate_new_random_resource" { default = "random123" }
 variable "service_name" { default = "my-service" }
-variable "server_count" { default = 5 }
+variable "server_count" { default = 3 }
 variable "environment" { default = "sandbox" }
 variable "ring" { default = "r0" }
 variable "region" { default = "us-west-2" }
