@@ -11,7 +11,7 @@ provider "random" {}
 
 locals {
   service_name = "myservice"
-  server_count = 5
+  server_count = 6
   environment  = "dev"
   region       = "us-east-2"
   ring         = "ring1"
