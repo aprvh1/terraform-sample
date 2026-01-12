@@ -15,7 +15,7 @@ variable "service_name" {
   type        = string
 }
 
-# 2. LOGIC: Using the variable in a resource
+# 2. LOGIC: Using the variable in a resource - Extra
 resource "random_id" "server_id" {
   byte_length = 4
   prefix      = "${var.service_name}-"
