@@ -4,7 +4,7 @@ variable "server_count" { default = 3 }
 variable "environment" { default = "sandbox" }
 variable "ring" { default = "r0" }
 variable "region" { default = "us-west-2" }
-variable "var" { default = "dodo" }
+variable "var1" { default = "dodo" }
 
 
 resource "random_id" "this" {
@@ -18,3 +18,5 @@ resource "random_id" "this" {
 }
 
 output "workspaces" { value = random_id.this[*].hex }
+
+output "var" { value = var.var1 }
