@@ -28,3 +28,4 @@ module "workspace" {
   generate_new_random_resource = "random1234"
 }
 output "workspace_names" { value = module.workspace.workspaces }
+output "var1" { value = module.workspace.var1 }
