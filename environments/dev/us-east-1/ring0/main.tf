@@ -29,8 +29,10 @@ module "workspace" {
 }
 
 output "var1_out" {
-  description = "The value of var1 passed through as an output"
-  value       = var.var1
+  description = "The value of var1 passed through from the module"
+  
+  # CHANGE THIS: Use the module output, not 'var.var1'
+  value = module.workspace.var1_export
 }
 
 output "workspace_names" { value = module.workspace.workspaces }
