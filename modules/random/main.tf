@@ -18,5 +18,3 @@ resource "random_id" "this" {
 }
 
 output "workspaces" { value = random_id.this[*].hex }
-
-output "var" { value = var.var1 }
