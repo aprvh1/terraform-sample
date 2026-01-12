@@ -17,6 +17,11 @@ locals {
   ring         = "ring0"
 }
 
+variable "var1" {
+  type    = string
+  default = "dodo"
+}
+
 module "workspace" {
   source = "../../../../modules/random"
 
@@ -26,6 +31,8 @@ module "workspace" {
   ring         = local.ring
 
   generate_new_random_resource = "random1234"
+
+  var1 = var.var1
 }
 
 output "var1_out" {
