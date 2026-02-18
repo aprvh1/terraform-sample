@@ -10,8 +10,8 @@ terraform {
 provider "random" {}
 
 locals {
-  service_name = "myservice1"
-  server_count = 2
+  service_name = "myservice12"
+  server_count = 5
   environment  = "dev"
   region       = "us-east-1"
   ring         = "ring0"
