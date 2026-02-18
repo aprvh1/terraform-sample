@@ -10,13 +10,8 @@ terraform {
 provider "random" {}
 
 locals {
-<<<<<<< feature/new-thing-1234
   service_name = "myservice12"
   server_count = 5
-=======
-  service_name = "myservice1"
-  server_count = 2
->>>>>>> main
   environment  = "dev"
   region       = "us-east-1"
   ring         = "ring0"
