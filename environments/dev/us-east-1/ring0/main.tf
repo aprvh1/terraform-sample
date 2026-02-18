@@ -10,11 +10,21 @@ terraform {
 provider "random" {}
 
 locals {
+<<<<<<< feature/new-thing-1234
   service_name = "myservice12"
   server_count = 5
+=======
+  service_name = "myservice1"
+  server_count = 2
+>>>>>>> main
   environment  = "dev"
   region       = "us-east-1"
   ring         = "ring0"
+}
+
+variable "var1" {
+  type    = string
+  default = "dodo"
 }
 
 module "workspace" {
@@ -26,5 +36,16 @@ module "workspace" {
   ring         = local.ring
 
   generate_new_random_resource = "random1234"
+
+  var1 = var.var1
 }
+
+output "var1_out" {
+  description = "The value of var1 passed through from the module"
+  
+  # CHANGE THIS: Use the module output, not 'var.var1'
+  value = module.workspace.var1_export
+}
+
 output "workspace_names" { value = module.workspace.workspaces }
+
